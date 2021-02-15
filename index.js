@@ -1,5 +1,5 @@
 /**
- * Copyright 2016 Google Inc. All rights reserved.
+ * Copyright 2020 PartyLich. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -95,7 +95,7 @@ module.exports = {
     'no-caller': 'error',
     // 'no-case-declarations': 'error', // eslint:recommended
     // 'no-div-regex': 'off',
-    // 'no-else-return': 'off',
+    'no-else-return': 'error',
     // 'no-empty-function': 'off',
     // 'no-empty-pattern': 'error', // eslint:recommended
     // 'no-eq-null': 'off',
@@ -204,6 +204,8 @@ module.exports = {
     // 'func-name-matching': 'off',
     // 'func-names': 'off',
     // 'func-style': 'off',
+    'function-call-argument-newline': ['error', 'consistent'],
+    'function-paren-newline': 'error',
     // 'id-blacklist': 'off',
     // 'id-length': 'off',
     // 'id-match': 'off',
@@ -231,7 +233,7 @@ module.exports = {
     // 'jsx-quotes': 'off',
     'key-spacing': 'error',
     'keyword-spacing': 'error',
-    // 'line-comment-position': 'off',
+    'line-comment-position': 'error',
     'linebreak-style': 'error',
     // 'lines-around-comment': 'off',
     // 'max-depth': 'off',
@@ -254,14 +256,14 @@ module.exports = {
     // TODO(philipwalton): add a rule to enforce the operator appearing
     // at the end of the line.
     'multiline-ternary': ['error', 'always-multiline'],
-    'new-cap': 'error',
+    'new-cap': ['error', { capIsNew: false }],
     // 'new-parens': 'off',
     'newline-per-chained-call': ['error', { ignoreChainWithDepth: 2 }],
     'no-array-constructor': 'error',
     // 'no-bitwise': 'off',
     // 'no-continue': 'off',
     // 'no-inline-comments': 'off',
-    // 'no-lonely-if': 'off',
+    'no-lonely-if': 'error',
     // 'no-mixed-operators': 'off',
     'no-mixed-spaces-and-tabs': 'error', // eslint:recommended
     // 'no-multi-assign': 'off',
@@ -275,8 +277,8 @@ module.exports = {
     // 'no-ternary': 'off',
     'no-trailing-spaces': 'error',
     // 'no-underscore-dangle': 'off',
-    // 'no-unneeded-ternary': 'off',
-    // 'no-whitespace-before-property': 'off',
+    'no-unneeded-ternary': 'error',
+    'no-whitespace-before-property': 'error',
     // 'nonblock-statement-body-position': 'off',
     // 'object-curly-newline': 'off',
     'object-curly-spacing': ['error', 'always'],
@@ -327,7 +329,7 @@ module.exports = {
       },
     ],
     // 'space-in-parens': 'off',
-    // 'space-infix-ops': 'off',
+    'space-infix-ops': 'error',
     // 'space-unary-ops': 'off',
     'spaced-comment': ['error', 'always'],
     'switch-colon-spacing': 'error',
@@ -343,7 +345,7 @@ module.exports = {
     // recommended. ESLint doesn't support a *consistent* setting so
     // "always" is used.
     'arrow-parens': ['error', 'always'],
-    // 'arrow-spacing': 'off',
+    'arrow-spacing': ['error', { 'before': true, "after": true }],
     'constructor-super': 'error', // eslint:recommended
     'generator-star-spacing': ['error', 'after'],
     // 'no-class-assign': 'off',
